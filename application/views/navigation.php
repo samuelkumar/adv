@@ -1,8 +1,4 @@
-<div class="site-menubar">
-    <div class="site-menubar-body" style="height:100%">
-      <div>
-        <div>
-          <ul class="site-menu">
+
             <li class="site-menu-category">General</li>
             <li class="site-menu-item has-sub active open">
               <a href="javascript:void(0)" data-slug="dashboard">
@@ -35,7 +31,7 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="<?php echo base_url()?>index.php/user/setting" data-slug="layout-grids">
+                  <a class="animsition-link" href="setting" data-slug="layout-grids">
                     <i class="site-menu-icon " aria-hidden="true"></i>
                     <span class="site-menu-title">System Settings</span>
                   </a>
@@ -45,14 +41,6 @@
             </li>
             
            
-          </ul>
-
-         
-        </div>
-      </div>
-    </div>
-
-    
-  </div>
+        
   
  

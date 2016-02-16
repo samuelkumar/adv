@@ -1,8 +1,7 @@
-
-
-    <div class="page-content padding-30 container-fluid">
-      <div class="row" data-plugin="matchHeight" data-by-row="true">
-        <div class="col-xlg-6 col-md-12">
+<div class="panel">
+<div class="panel-body container-fluid">
+    <div class="row" data-plugin="matchHeight" data-by-row="true">
+<div class="col-xlg-6 col-md-12">
           <!-- Panel Predictions -->
           <div class="widget widget-shadow widget-responsive" id="widgetLineareaColor">
             <div class="widget-content widget-radius bg-white">
@@ -640,5 +639,6 @@
           </div>
           <!-- End Panel Sales Analysis -->
         </div>
-      </div>
-    </div>
+</div> 
+</div>
+</div>    

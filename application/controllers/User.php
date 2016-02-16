@@ -13,8 +13,7 @@ class User extends CI_Controller {
 function __construct() {
         parent::__construct();
 		
-		$this->load->helper('url');
-		$this->load->Model('Authorize_model');
+		
         $this->load->database();
 		
 		
@@ -23,7 +22,7 @@ function __construct() {
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
         $this->output->set_header('Pragma: no-cache');
         $this->output->set_header("Expires: Mon, 26 Jul 2010 05:00:00 GMT");
-        $this->load->library('session');
+       
      
     }
 
@@ -38,8 +37,14 @@ function __construct() {
 
 	}
 	
-	
-	public function setting(){
+	public function canned_msg_form()
+        {
+            $data['page_title'] = 'Msg form';
+	$data['page_name'] = 'canned_msg_form';
+	$this->load->view('index', $data);
+        }
+
+                public function setting(){
 	$data['page_title'] = 'Settings';
 	$data['page_name'] = 'sys_settings';
 	$this->load->view('index', $data);

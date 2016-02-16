@@ -24,7 +24,7 @@ function __construct() {
 	
 
 $page_data['page_name'] = 'dashboard';
-        $page_data['page_title'] = 'Dashboard';
+        $page_data['page_title'] = 'Dash board';
 $this->load->view('index', $page_data);
 	}
 	

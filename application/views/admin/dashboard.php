@@ -1,4 +1,5 @@
 
+
     <div class="page-content padding-30 container-fluid">
       <div class="row" data-plugin="matchHeight" data-by-row="true">
         <div class="col-xlg-6 col-md-12">

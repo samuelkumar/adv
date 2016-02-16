@@ -1,42 +1,46 @@
 <!-- Core  -->
-  <script src="../assets/vendor/jquery/jquery.js"></script>
-  <script src="../assets/vendor/bootstrap/bootstrap.js"></script>
-  <script src="../assets/vendor/animsition/jquery.animsition.js"></script>
-  <script src="../assets/vendor/asscroll/jquery-asScroll.js"></script>
-  <script src="../assets/vendor/mousewheel/jquery.mousewheel.js"></script>
-  <script src="../assets/vendor/asscrollable/jquery.asScrollable.all.js"></script>
-  <script src="../assets/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/jquery/jquery.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/bootstrap/bootstrap.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/animsition/jquery.animsition.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/asscroll/jquery-asScroll.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/mousewheel/jquery.mousewheel.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/asscrollable/jquery.asScrollable.all.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
 
   <!-- Plugins -->
-  <script src="../assets/vendor/switchery/switchery.min.js"></script>
-  <script src="../assets/vendor/intro-js/intro.js"></script>
-  <script src="../assets/vendor/screenfull/screenfull.js"></script>
-  <script src="../assets/vendor/slidepanel/jquery-slidePanel.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/switchery/switchery.min.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/intro-js/intro.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/screenfull/screenfull.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/slidepanel/jquery-slidePanel.js"></script>
 
-  <script src="../assets/vendor/skycons/skycons.js"></script>
-  <script src="../assets/vendor/chartist-js/chartist.min.js"></script>
-  <script src="../assets/vendor/aspieprogress/jquery-asPieProgress.min.js"></script>
-  <script src="../assets/vendor/jvectormap/jquery-jvectormap.min.js"></script>
-  <script src="../assets/vendor/jvectormap/maps/jquery-jvectormap-ca-lcc-en.js"></script>
-  <script src="../assets/vendor/matchheight/jquery.matchHeight-min.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/skycons/skycons.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/chartist-js/chartist.min.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/aspieprogress/jquery-asPieProgress.min.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/jvectormap/jquery-jvectormap.min.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/jvectormap/maps/jquery-jvectormap-ca-lcc-en.js"></script>
+  <script src="<?php echo base_url()?>assets/vendor/matchheight/jquery.matchHeight-min.js"></script>
 
   <!-- Scripts -->
-  <script src="../assets/js/core.js"></script>
-  <script src="../assets/js/site.js"></script>
+  <script src="<?php echo base_url()?>assets/js/core.js"></script>
+  <script src="<?php echo base_url()?>assets/js/site.js"></script>
 
-  <script src="../assets/js/sections/menu.js"></script>
-  <script src="../assets/js/sections/menubar.js"></script>
-  <script src="../assets/js/sections/sidebar.js"></script>
+  <script src="<?php echo base_url()?>assets/js/sections/menu.js"></script>
+  <script src="<?php echo base_url()?>assets/js/sections/menubar.js"></script>
+  <script src="<?php echo base_url()?>assets/js/sections/sidebar.js"></script>
 
-  <script src="../assets/js/configs/config-colors.js"></script>
-  <script src="../assets/js/configs/config-tour.js"></script>
+  <script src="<?php echo base_url()?>assets/js/configs/config-colors.js"></script>
+  <script src="<?php echo base_url()?>assets/js/configs/config-tour.js"></script>
 
-  <script src="../assets/js/components/asscrollable.js"></script>
-  <script src="../assets/js/components/animsition.js"></script>
-  <script src="../assets/js/components/slidepanel.js"></script>
-  <script src="../assets/js/components/switchery.js"></script>
-  <script src="../assets/js/components/matchheight.js"></script>
-  <script src="../assets/js/components/jvectormap.js"></script>
+  <script src="<?php echo base_url()?>assets/js/components/asscrollable.js"></script>
+  <script src="<?php echo base_url()?>assets/js/components/animsition.js"></script>
+  <script src="<?php echo base_url()?>assets/js/components/slidepanel.js"></script>
+  <script src="<?php echo base_url()?>assets/js/components/switchery.js"></script>
+  <script src="<?php echo base_url()?>assets/js/components/matchheight.js"></script>
+  <script src="<?php echo base_url()?>assets/js/components/jvectormap.js"></script>
+  
+  
+   <script src="<?php echo base_url()?>assets/vendor/formvalidation/formValidation.min.js"></script>
+   
 
   <script>
     $(document).ready(function($) {
@@ -383,4 +387,115 @@
       })();
 
     });
+  </script>
+  
+  
+  
+  
+  <script>
+   
+      $(document).ready(function($) {
+       
+        $('#exampleFullForm').formValidation({
+          framework: "bootstrap",
+          button: {
+            selector: '#validateButton1',
+            disabled: 'disabled'
+          },
+          icon: null,
+          fields: {
+            username: {
+              validators: {
+                notEmpty: {
+                  message: 'The username is required'
+                },
+                stringLength: {
+                  min: 6,
+                  max: 30
+                },
+                regexp: {
+                  regexp: /^[a-zA-Z0-9]+$/
+                }
+              }
+            },
+            email: {
+              validators: {
+                notEmpty: {
+                  message: 'The username is required'
+                },
+                emailAddress: {
+                  message: 'The email address is not valid'
+                }
+              }
+            },
+            password: {
+              validators: {
+                notEmpty: {
+                  message: 'The password is required'
+                },
+                stringLength: {
+                  min: 8
+                }
+              }
+            },
+            birthday: {
+              validators: {
+                notEmpty: {
+                  message: 'The birthday is required'
+                },
+                date: {
+                  format: 'YYYY/MM/DD'
+                }
+              }
+            },
+            github: {
+              validators: {
+                url: {
+                  message: 'The url is not valid'
+                }
+              }
+            },
+            skills: {
+              validators: {
+                notEmpty: {
+                  message: 'The skills is required'
+                },
+                stringLength: {
+                  max: 300
+                }
+              }
+            },
+            porto_is: {
+              validators: {
+                notEmpty: {
+                  message: 'Please specify at least one'
+                }
+              }
+            },
+            'for[]': {
+              validators: {
+                notEmpty: {
+                  message: 'Please specify at least one'
+                }
+              }
+            },
+            company: {
+              validators: {
+                notEmpty: {
+                  message: 'Please company'
+                }
+              }
+            },
+            browsers: {
+              validators: {
+                notEmpty: {
+                  message: 'Please specify at least one browser you use daily for development'
+                }
+              }
+            }
+          }
+        });
+      });
+
+    
   </script>

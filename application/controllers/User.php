@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class User extends CI_Controller {
 
 /* 	
  * 	@author : Rajapandi
@@ -31,14 +31,19 @@ function __construct() {
 	public function index()
 	{
 	
-	$data['page_title'] = 'Login';
-	$this->load->view('admin/login_view',$data);
 	
-	
-	
-	
+	$data['page_title'] = 'DashBoard';
+	$data['page_name'] = 'dashboard';
+	$this->load->view('index', $data);
+
 	}
 	
+	
+	public function setting(){
+	$data['page_title'] = 'Settings';
+	$data['page_name'] = 'sys_settings';
+	$this->load->view('index', $data);
+	}
 	
 	
 }
